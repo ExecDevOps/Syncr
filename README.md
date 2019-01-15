@@ -1,7 +1,7 @@
 # Syncr
 Syncs files between two servers in a 2-node cluster automagically without having to rely on cron job or other time based mechanism. Syncr is triggered by incron which relies on the filesystem's inotify mechanism, inotify fires events whenever a monitoried file or directory changes.
 
-Besides synchronization of files Syncr also has a basic but very powerful mechanism to execute post-sync tasks. A list of commands can be provided for each monitored file, these will be executed in sequence as soon as the server(s) get a notification of a filechange. This is very handy for i.e. services that needs to be restarted whenever their configuration file changes.
+Besides synchronization of files Syncr also has a basic but very powerful mechanism for executing post-sync tasks. A list of commands can be provided for each monitored file, these will be executed in sequence as soon as the server(s) get a notification of a filechange. This is very handy for i.e. services that needs to be restarted whenever their configuration file changes.
 
 Syncr does not dictate which server should be the source and which should be the target, any server can have a monitored file altered and Syncr happily replicates the file and executes commands that belong to the file, if there are any.
 
